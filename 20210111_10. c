@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-int rangeZeros(int num, int pos);
+int ramoveBit(int num, int pos);
 
 int main() {
-    rangeZeros(171, 3);
+    ramoveBit(171, 3);
     return 0;
-}
+    }
 
-int rangeZeros(int num, int pos){
+int ramoveBit(int num, int pos){
     int ans=num&~(0xFFFFFFFF<<pos);
     printf("%d",ans);
     return 0;
-}
+    }
