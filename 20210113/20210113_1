@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(){
+    char x = 255;
+    char y = 10;
+    char rez = x+y;
+    //x += 1;
+    printf("%d\n", rez);
+    return 0;
+}
