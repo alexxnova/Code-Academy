@@ -1,7 +1,8 @@
 #include <stdio.h>
 
  int main(){
-    float howMuch total;
+    float howMuch;
+    float total;
     double tomatoPrice = 4.5;
     double flourPrice = 1.8;
     double candyPrice = 1.5;
