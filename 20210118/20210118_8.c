@@ -3,7 +3,10 @@
 int isLetter(char c);
 
 int main(){  
-    isLetter('d');
+    char c;
+    printf("Enter character: ");
+    c = getchar();
+    isLetter(c);
     return 0;
 }
 
