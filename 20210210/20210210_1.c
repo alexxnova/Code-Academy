@@ -9,18 +9,19 @@ int arr[10] = {23, 91, 36, 4, 9, 99, 87, 11, 2, 33};
 
 #include <stdio.h>
 
-void sumOdd( int *a);
+int sumEven( int *a, int len);
 
 int main(void){
     int arr[10] = 
-    {23, 91, 36, 4, 9, 99, 87, 11, 2, 33};
-    
-    sumOdd(arr);
-
+    {23, 91, 36, 4, 9, 99, 87, 11, 2, 33}; 
+    printf("%d", sumEven(arr, 10));
     return 0;
 }
 
-void sumOdd( int *a){
-    int sum = 
-        printf("%d", *a);
+int sumEven( int *a, int len){
+    int i, sum=0;
+    for (i=0; i<len; i+=2){
+        sum += *(a+i);
+   }
+   return sum;
 }
