@@ -25,12 +25,6 @@ int main(){
     printf("%p\n", p);
     printf("%p\n", &a);
 
-    // for ( int i = 0; i < row; ++i )
-    //     for ( int j = 0; j < col; ++j )
-    //         for ( int k = 0; k < depth; ++k )
-    //                printf("%d\n", *(p+i+j+k) = rand()% 100 +1);
-    //                ;
-    
     double sum = 0;
     for(; p<=&a[row-1][col-1][depth-1]; p++){
             sum += (*p = rand()% 100 +1);
