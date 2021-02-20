@@ -14,7 +14,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-//int * randomIndex(size_t len);
 char randLowerCase(void);
 char randUperCase(void);
 char randSymbols(void);
@@ -45,31 +44,6 @@ int main(void){
     return 0;
 }
 
-    // int * randomIndex(size_t len){
-    //     int position[len];
-    //     int * p;
-
-    //     p = malloc(len * sizeof(*p));   // to return poiner to array which is not static must alocate memory
-    //     if (p == NULL)                  //check malloc success
-    //         return NULL;
-    //     int * pStart = p;
-
-    //     for(int i=0; i<len; i++){       // populate array from 0 to length declare by user
-    //         p[i]=i;
-    //         }
-
-    //     for (int j=0; j<len; j++){
-    //         int randIndex = rand() % len;     // random index to swap values
-    //         int temp = p[j];
-            
-    //         p[j] = p[randIndex];  
-    //         p[randIndex] = temp;
-    //         }
-    //     for (int i = 0; i < len; i++) {    // print array
-    //         //printf("%d ",p[i]);
-    //     }
-    // return  pStart;
-    // }
 
     char randLowerCase(void){
         return (rand() % (123 - 97) + 97);
