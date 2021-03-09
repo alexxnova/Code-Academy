@@ -35,28 +35,3 @@ OUTPUT3.TXT
 147
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int main(void){
-    char c;
-    int price[11];
-    int km=0;
-    FILE * fp = NULL;
-
-    fp = fopen("input3.txt", "r");
-    if (!fp){
-        printf("Failed to open.\n");
-    }
-    for (int i=0; i<11; i++){
-         fscanf(fp, "%d ", &price[i], &km);
-    }
-    printf("%d\n", price[9]);
-    printf("%d\n", km);
-
-    fclose(fp);
-    fp=NULL;
-    
-    return 0;
-}
