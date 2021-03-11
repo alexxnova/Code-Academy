@@ -43,9 +43,9 @@ int main( ) {
         printf("Unable to create file.\n");
             exit(0);
     }
- 
+    // redirect the result  of printf to output.csv file in cmp as .\a.exe > new.csv  
     for (int i = 0; i<size; i++){
-        fprintf(file,"%d,%f,%c\n",data1[i].m_int,data1[i].m_double, data1[i].m_char);
+        printf("%d,%f,%c\n",data1[i].m_int,data1[i].m_double, data1[i].m_char);
     }
     
     fclose(file);
