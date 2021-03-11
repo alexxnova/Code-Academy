@@ -12,7 +12,7 @@ int main(int argc, char* argv[]){
     FILE * fp1 = NULL;
     FILE * fp2 = NULL;
 
-    fp1 = fopen("zad2_check.c", "r");
+    fp1 = fopen("zad2_check.c", "r";
 
     if (fp1 == NULL || fp2 == NULL){
         perror("");
