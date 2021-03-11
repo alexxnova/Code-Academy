@@ -17,7 +17,7 @@ CType2 m_bitField2 : M;
 
 #include <stdio.h>
 #include <string.h>
-#pragma pack(1)
+//#pragma pack(1)
 
 struct tagMyData {
     char m_char: 6;
@@ -26,14 +26,19 @@ struct tagMyData {
     short int m_num1: 3;
 };
 
-int main( ) {
-    struct tagMyData data;
+struct tagMyData2 {
+    short int m_num: 3;
+    short int m_num1: 3;
+    char m_char: 6;
+    char m_char1: 6;
+}__attribute__((packed));
 
-    // data.m_num=7;
-    // printf("\n%d", data.m_num);
-    // data.m_char='c';
-    // printf("\n%c",data.m_char);
-    printf("Size of: %d",sizeof(data));
+int main( ) {
+    struct tagMyData data1;
+    struct tagMyData2 data2;
+
+    printf("Size of: %d\n",sizeof(data1));
+    printf("Size of: %d\n",sizeof(data2));
 
 return 0;
 }
