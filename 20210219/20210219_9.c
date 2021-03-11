@@ -1,35 +1,42 @@
 /*
-. Направете функця add(), която събира две точки.
+Направете функця add(), която събира две точки.
 */
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 struct point{
     int m_x;
     int m_y;
     };
 
-struct point add(struct point *a,struct point *b);
-struct point makePoint(int x,int y);
+void add(struct point * point,struct point *a,struct point *b);
+void makePoint(struct point * point, int x,int y);
 
 int main(void){
+    struct point * point1 = (struct point *)malloc(sizeof(struct point));
+    struct point * point2 = (struct point *)malloc(sizeof(struct point));
+    struct point * addPoint = (struct point *)malloc(sizeof(struct point));
+    makePoint(point1,1,3);
+    makePoint(point2,15,15);
 
-    struct point point1 = {1,2};
-    struct point point2 = {3,4};
+    add(addPoint, point1, point2);
 
-    struct point addPoint = add(&point1, &point2);
-    printf("x=%d\ny=%d\n", addPoint.m_x, addPoint.m_y);
+    printf("x=%d\ny=%d\n", addPoint->m_x, addPoint->m_y);
 
     return 0;
 }
 
-struct point makePoint(int x,int y){
-    struct point point={x,y};
-    return point;
+void makePoint(struct point * point, int x,int y){
+    point->m_x=x;
+    point->m_y=y;
+return;
 }
 
-struct point add(struct point *a,struct point *b){
-    return makePoint( a->m_x + b->m_x, a->m_y + b->m_y);
+void add(struct point * point, struct point *a,struct point *b){
+    point->m_x=a->m_x + b->m_x;
+    point->m_y=a->m_y + b->m_y;
+    return;
 }
 
