@@ -1,0 +1,36 @@
+Напишете програма RAZ.EXE, която въвежда от клавиатурата
+ естествено число N (N<00) и след това N на брой думи.
+Програмата трябва да изведе на екрана броя M на думите, 
+които не се повтарят, както и самите думи.
+Примери:
+
+Вход
+N=6
+nebe
+more
+voda
+gora
+more
+reka
+Резултат
+М=4 
+nebe
+voda
+gora
+reka
+
+Вход
+N=8
+program
+computer
+computer
+program
+computer
+disk
+program
+computer
+Резултат
+M=1
+disk 
+
+ 
