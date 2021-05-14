@@ -1,0 +1,35 @@
+Aleksandra Ivanova 
+
+1. Create a directory in your home directory called projects. In the projects
+directory, create nine empty files that are named house1, house2, house3, and so on to house9. Assuming there are lots of other fi les in that directory, come up with a single argument to ls that would list just those nine files.
+Answer 1.
+
+alexx@alexx-VirtualBox:/$ sudo mkdir projects
+alexx@alexx-VirtualBox:/$ cd projects
+alexx@alexx-VirtualBox:/projects$ sudo touch house{1..9}
+alexx@alexx-VirtualBox:/projects$ ls house*
+
+2. Make the $HOME/projects/houses/doors/ directory path. 
+Create the following empty fi les within this directory path 
+(try using absolute and relative paths from your home directory):
+$HOME/projects/houses/bungalow.txt
+$HOME/projects/houses/doors/bifold.txt
+$HOME/projects/outdoors/vegetation/landscape.txt
+
+alexx@alexx-VirtualBox:/projects$ sudo mkdir houses
+alexx@alexx-VirtualBox:/projects$ cd houses
+alexx@alexx-VirtualBox:/projects/houses$ sudo touch bungalow.txt
+alexx@alexx-VirtualBox:/projects/houses$ sudo mkdir doors outdoors
+alexx@alexx-VirtualBox:/projects/houses$ sudo touch ./doors/bifold.txt 
+alexx@alexx-VirtualBox:/projects/houses$ sudo touch /projects/houses/outdoors/vegeration/landscape.txt
+
+3. Copy the files house1 and house5 to the $HOME/projects/houses/ directory.
+
+alexx@alexx-VirtualBox:/projects$ sudo cp -r house1 ./houses
+alexx@alexx-VirtualBox:/projects$ sudo cp -r house5 ./houses
+
+4. Remove the files house6, house7, and house8 without being prompted.
+
+alexx@alexx-VirtualBox:/projects$ sudo rm -f house{6..8}
+
+
