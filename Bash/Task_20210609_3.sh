@@ -1,0 +1,7 @@
+#! /bin/bash
+
+FIRST=$1
+SECOND=$3
+SIGN=$2
+RESULT=$(($FIRST$SIGN$SECOND))
+echo $RESULT
